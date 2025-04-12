@@ -1,9 +1,9 @@
 import React from 'react';
 
-const TextComponents = () => {
+const TextComponents = (props) => {
     return (
         <div>
-            <p>TErceiro componente</p>
+            <p><h1>{props.text}</h1></p>
         </div>
     );
 };

@@ -8,7 +8,9 @@ function App() {
     <>
       <SecondText />
       <ThirdText />
-      <TextComponents />
+      <TextComponents text="Meu Primeiro Texto" />
+      <TextComponents text="Meu Segundo Texto"/>
+      <TextComponents text="Agora vai"/>
       <Header />
     </>
   );
