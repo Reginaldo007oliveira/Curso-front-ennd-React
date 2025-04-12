@@ -4,18 +4,16 @@ import TextComponents from "./components/TextComponents.jsx";
 import { SecondText, ThirdText } from "./components/OtherComponets.jsx";
 import { Events } from "./components/Events.jsx";
 
- export function App() {
+export default function App() {
   return (
     <>
-    <Events />
+      <Events />
       <SecondText />
       <ThirdText />
       <TextComponents text="Meu Primeiro Textoq" description="pega essa...." />
-      <TextComponents text="Meu Segundo Texto"/>
-      <TextComponents text="Agora vai"/>
+      <TextComponents text="Meu Segundo Texto" />
+      <TextComponents text="Agora vai" />
       <Header />
     </>
   );
 }
-
-
