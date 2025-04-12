@@ -8,7 +8,7 @@ function App() {
     <>
       <SecondText />
       <ThirdText />
-      <TextComponents text="Meu Primeiro Texto" />
+      <TextComponents text="Meu Primeiro Textoq" description="pega essa...." />
       <TextComponents text="Meu Segundo Texto"/>
       <TextComponents text="Agora vai"/>
       <Header />

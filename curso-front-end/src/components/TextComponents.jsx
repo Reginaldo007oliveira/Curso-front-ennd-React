@@ -1,9 +1,10 @@
 import React from 'react';
 
-const TextComponents = (props) => {
+const TextComponents = ({text, description}) => {
     return (
         <div>
-            <p><h1>{props.text}</h1></p>
+            <p><h1>{text}</h1></p>
+            <p><h1>{description}</h1></p>
         </div>
     );
 };
