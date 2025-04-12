@@ -3,6 +3,7 @@ import { Header } from "./components/header";
 import TextComponents from "./components/TextComponents.jsx";
 import { SecondText, ThirdText } from "./components/OtherComponets.jsx";
 import { Events } from "./components/Events.jsx";
+import { CssInline } from "./components/cssInline.jsx";
 
 export default function App() {
   const cssInline = {
@@ -12,9 +13,12 @@ export default function App() {
   };
   return (
     <>
+   
     <p style={cssInline}> Meu paragrafo</p>
-      <Events />
-      <SecondText />
+    <h2>Meu componente Css</h2>
+   <CssInline> </CssInline>
+     
+      <SecondText  />
       <ThirdText />
       <TextComponents  text="Meu Primeiro Textoq" description="pega essa...." />
       <TextComponents text="Meu Segundo Texto" />
