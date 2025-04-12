@@ -2,10 +2,12 @@ import "./App.css";
 import { Header } from "./components/header";
 import TextComponents from "./components/TextComponents.jsx";
 import { SecondText, ThirdText } from "./components/OtherComponets.jsx";
+import { Events } from "./components/Events.jsx";
 
-function App() {
+ export function App() {
   return (
     <>
+    <Events />
       <SecondText />
       <ThirdText />
       <TextComponents text="Meu Primeiro Textoq" description="pega essa...." />
@@ -16,4 +18,4 @@ function App() {
   );
 }
 
-export default App;
+
