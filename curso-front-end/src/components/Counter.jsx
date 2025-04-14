@@ -1,21 +1,4 @@
-// import React,{useState} from 'react';
-
-// // import { Container } from './styles';
-
-// function Counter() {
-//     const [counter, setCounter] = useState(0);
-//     const inscrement = () => {
-//         setCounter((prevState)=> prevState)
-//     }
-//   return(
-//     <>
-
-//    </>
-//   )
-
-// }
-
-// export default Counter função abrev;
+//UseEffects
 
 import React, { useState, useEffect } from "react";
 
@@ -37,6 +20,10 @@ export const Counter = () => {
   };
 
   const [counter, setCounter] = useState(0);
+  useEffect(() => {
+    document.title = `Contador: ${counter}`;
+    console.log("executou")
+  },[counter]) //array de dependencia .. toda vez que o counter alterar .. também executa novamente mudando o valor do counter
 
   const increment = () => {
     setCounter((clique) => clique + 1);

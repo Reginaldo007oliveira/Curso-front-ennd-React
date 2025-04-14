@@ -7,6 +7,7 @@ import { CssInline } from "./components/cssInline.jsx";
 import { MyComponentcss } from "./components/MyCssComponent/MyComponentcss.jsx";
 import { Counter } from "./components/Counter.jsx";
 import { ProductQuantity } from "./components/ProductQuantity.jsx";
+import { GitHubUser } from "./components/GitHubUser.jsx";
 
 export default function App() {
   const cssInline = {
@@ -19,6 +20,11 @@ export default function App() {
       <p>css escrito inline</p>
       <p style={cssInline}> Meu paragrafos</p>
       <h2>Meu componente Css texto escrito</h2>
+
+        {/* Github User */}
+        <p>GitHub User...</p>
+      <GitHubUser />
+      <hr />
       
       {/* insere produto no carrinho */}
       <p>insere produto no carrinho ...</p>
