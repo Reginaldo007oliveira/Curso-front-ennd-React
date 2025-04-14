@@ -2,7 +2,7 @@ import React from 'react'
 
 export const CssInline = () => {
     const styloco = {
-        color: '#0815cc',
+        color: '#bf08cc',
         fontSize: '20px',
         };
   return (
