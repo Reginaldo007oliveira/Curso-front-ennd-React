@@ -5,6 +5,7 @@ import { SecondText, ThirdText } from "./components/OtherComponets.jsx";
 import { Events } from "./components/Events.jsx";
 import { CssInline } from "./components/cssInline.jsx";
 import { MyComponentcss } from "./components/MyCssComponent/MyComponentcss.jsx";
+import { Counter } from "./components/Counter.jsx";
 
 export default function App() {
   const cssInline = {
@@ -17,6 +18,7 @@ export default function App() {
    
     <p style={cssInline}> Meu paragrafo</p>
     <h2>Meu componente Css</h2>
+    <Counter />
     <MyComponentcss />
    <CssInline> </CssInline>
      <Events />
