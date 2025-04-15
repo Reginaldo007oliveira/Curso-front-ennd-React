@@ -9,7 +9,7 @@ export const Clock = () => {
              setTime(new Date().toLocaleTimeString()) //setTime a cada passada de intervalo .. permanece time se nada ocorrer
         }, 3000) //atualiza a cada 3 segundos
         return () => clearInterval(intervalo) //limpa a memoria
-    }, []) 
+    }, []) // dependencia vazia para não criar de novo
 
   return (
 <>

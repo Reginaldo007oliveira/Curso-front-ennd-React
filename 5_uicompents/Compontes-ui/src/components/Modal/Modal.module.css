@@ -1,0 +1,74 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.openButton {
+  padding: 14px 56px;
+  font-size: 35x;
+  color: rgb(0, 0, 0);
+  background-color: rgb(209, 77, 15);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 9px;
+  transition: background-color 0.3s ease-in-out; /* Transição suave para a cor de fundo */
+}
+.openButton:hover {
+  background: rgb(23, 34, 242);
+}
+
+.modal {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  background: rgba(183, 230, 13, 0.42);
+  animation: fadeIn 5.9s forwards;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.modalContent {
+  background: #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  max-width: 800px;
+  text-align: center;
+  color: #333;
+  animation: scaleUp 6.3s forwards;
+}
+
+@keyframes scaleUp {
+    from {
+      transform: scale(0.8);
+    }
+    to {
+      transform: scale(1);
+    }
+}
+
+.closeButton{
+    padding: 8px 16px;
+    font-size:14px;
+    background-color:rgb(162, 8, 83);
+    color:#000;
+    border:none;
+    border-radius: 5px;
+    cursor:pointer;
+    transition: background-color 1.4s ease-in-out;
+   
+
+}
+.closeButton:hover{
+    background-color:rgb(9, 182, 201);
+}
