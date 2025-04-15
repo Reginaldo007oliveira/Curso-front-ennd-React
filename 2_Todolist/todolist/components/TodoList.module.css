@@ -1,0 +1,23 @@
+.container{
+    background:#ff0000;
+}
+.container li{
+    background:#543;
+}
+
+.title{
+    color: #000000;
+}
+.inputContainer{
+    background-color: #CCAABB;
+}
+.inputContainer li{
+    background-color: #CCAABB;
+}
+
+input{
+    background:#ff0;
+}
+button{
+    background-color: #df7;
+}
