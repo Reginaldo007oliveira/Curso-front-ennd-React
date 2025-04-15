@@ -5,20 +5,20 @@ import styles from "./TodoList.module.css";
 
 //função do campó imput
 export const TodoList = () => {
-  const [task, setTask] = useState("");
+  const [task, setTask] = useState(""); // tasks vazia
   // console.log("task", task)
 
   //add task
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState([]); //vetor para dicionar as tasks
 
   //função do botão
   const addTask = () => {
-    //limpa dados do formulário
-    if (task.trim() === "") return;
-    setTasks([...tasks, task]);
-    setTask("");
+    //limpa dados do formulário o trim vai tirar os espaços vazios
+    if (task.trim() === "") return; // se eu tentar adicionar a task não vai acontecer nada. Vai dar um retorno vazio.
+    setTasks([...tasks, task]); //vai verificar todas as tasks que ja existem e adicionar mais uma
+    setTask(""); //limpa o campo de formulario
   };
-  console.log("adiciona Task", tasks);
+  console.log("adiciona Task", tasks, setTask);
 
   return (
     <div className={styles.container}>
