@@ -7,6 +7,15 @@ export const ContactForm = () => {
     email: "",
     mensagem: ""
   })
+  const HandleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+     //    setFormData ({... formData, name: e.target.value});
+        //}   else if (e.target.name === "email"){
+        //    setFormData ({... formData, email: e.target.value});
+        // }
+        //O resultado a cima substitui o codigo comentado
+  }
+ 
   return (
     <>
     <form className={style.form} action="">
@@ -16,6 +25,8 @@ export const ContactForm = () => {
         placeholder="Nome"
         className={style.input}
         value={formData.nome}
+        onChange={HandleChange}
+        required="true"
       />
       <input
         type="text"
@@ -23,6 +34,9 @@ export const ContactForm = () => {
         placeholder="email"
         className={style.input}
         value={formData.email}
+        onChange={HandleChange}
+        required="true"
+
       />
 
       <textarea
@@ -30,6 +44,8 @@ export const ContactForm = () => {
         placeholder="Mensagem"
         className={style.textarea}
         value={formData.textarea}
+        onChange={HandleChange}
+        required="true"
         
       />
 
@@ -37,6 +53,7 @@ export const ContactForm = () => {
         Enviar
       </button>
     </form>
+    
     </>
   );
 };
