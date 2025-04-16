@@ -1,35 +1,27 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react'; // Importa o hook useState do React para gerenciar o estado
+import './App.css'; // Importa o arquivo CSS para estilização do aplicativo
+import { Header } from './components/ToggleTheme/Header'; // Importa o componente Header
+import { Content } from './components/ToggleTheme/Content'; // Importa o componente Content
 
 function App() {
-  const [count, setCount] = useState(0)
+  // Define o estado 'theme' com o valor inicial "light"
+  const [theme, setTheme] = useState("light");
+
+  // Função para alternar entre os temas "light" e "dark"
+  const toggleTheme = () => {
+    setTheme(prevTheme => (prevTheme === "light" ? "dark" : "light"));
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    // Aplica a classe 'app' e a classe do tema atual ao div principal
+    <div className={`app ${theme}`}>
+      {/* Renderiza o componente Header, passando o tema e a função de alternância como props */}
+      <Header theme={theme} toggleTheme={toggleTheme} />
+      {/* Renderiza o componente Content, passando o tema como prop */}
+      <Content theme={theme} />
+    </div>
+  );
 }
 
-export default App
+// Exporta o componente App como padrão para ser utilizado em outros arquivos
+export default App;
