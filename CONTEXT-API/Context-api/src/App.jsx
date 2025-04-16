@@ -4,7 +4,6 @@ import { Header } from './components/ToggleTheme/Header'; // Importa o component
 import { Content } from './components/ToggleTheme/Content'; // Importa o componente Content
 
 function App() {
-  // Define o estado 'theme' com o valor inicial "light"
   const [theme, setTheme] = useState("light");
 
   // Função para alternar entre os temas "light" e "dark"
