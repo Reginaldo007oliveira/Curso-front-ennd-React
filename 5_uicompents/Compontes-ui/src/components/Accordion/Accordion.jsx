@@ -5,50 +5,52 @@ export const Accordion = () => {
   const [activeIndex, setActiveIndex] = useState(null);
   const items = [
     {
-      question: "Agora Vai,",
+      question: "Lorem ipsum dolor sit amet?",
       answer:
-        "consectetur adipisicing elit. Ipsa cum excepturi eveniet nemo, quod sapiente amet laudantium praesentium quaerat id tempora atque magni totam optio culpa. Et autem ducimus consectetur?"
-    },
-
-    {
-      question: "bora bora",
-      answer:
-        "consectetur adipisicing elit. Ipsa cum excepturi eveniet nemo, quod sapiente amet laudantium praesentium quaerat id tempora atque magni totam optio culpa. Et autem ducimus consectetur?"
-    },
-
-    {
-      question: "Lorem ipsum dolor sit amet,",
-      answer:
-        "consectetur adipisicing elit. Ipsa cum excepturi eveniet nemo, quod sapiente amet laudantium praesentium quaerat id tempora atque magni totam optio culpa. Et autem ducimus consectetur?"
+        "Consectetur adipisicing elit. Ipsa cum excepturi eveniet nemo, quod sapiente amet laudantium praesentium quaerat id tempora atque magni totam optio culpa. Et autem ducimus consectetur?"
     },
     {
-      question: "Lorem ipsum dolor sit amet,",
+      question: "Lorem ipsum dolor sit amet?",
       answer:
-        "consectetur adipisicing elit. Ipsa cum excepturi eveniet nemo, quod sapiente amet laudantium praesentium quaerat id tempora atque magni totam optio culpa. Et autem ducimus consectetur?"
+        "Consectetur adipisicing elit. Ipsa cum excepturi eveniet nemo, quod sapiente amet laudantium praesentium quaerat id tempora atque magni totam optio culpa. Et autem ducimus consectetur?"
     },
     {
-      question: "Lorem ipsum dolor sit amet,",
+      question: "Lorem ipsum dolor sit amet?",
       answer:
-        "consectetur adipisicing elit. Ipsa cum excepturi eveniet nemo, quod sapiente amet laudantium praesentium quaerat id tempora atque magni totam optio culpa. Et autem ducimus consectetur?"
+        "Consectetur adipisicing elit. Ipsa cum excepturi eveniet nemo, quod sapiente amet laudantium praesentium quaerat id tempora atque magni totam optio culpa. Et autem ducimus consectetur?"
     },
+    {
+      question: "Lorem ipsum dolor sit amet?",
+      answer:
+        "Consectetur adipisicing elit. Ipsa cum excepturi eveniet nemo, quod sapiente amet laudantium praesentium quaerat id tempora atque magni totam optio culpa. Et autem ducimus consectetur?"
+    },
+    {
+      question: "Lorem ipsum dolor sit amet?",
+      answer:
+        "Consectetur adipisicing elit. Ipsa cum excepturi eveniet nemo, quod sapiente amet laudantium praesentium quaerat id tempora atque magni totam optio culpa. Et autem ducimus consectetur?"
+    }
   ];
 
-  return (
-    <>
-      <div className={styles.accordion}>
-        {items.map((item, index) => (
-          <div
-            key={index}
-            className={`${styles.item} ${ activeIndex === index ? styles.open :"" }`}>
-            {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
-            <button className={styles.button}>{item.question}</button>
+  const handleToggle = (index) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
 
-            {activeIndex === index && (
-              <p className={styles.answer}> {item.answer} </p>
-            )}
-          </div>
-        ))}
-      </div>
-    </>
+  return (
+    <div className={styles.accordion}>
+      {items.map((item, index) => (
+        <div
+          key={index}
+          className={`${styles.item} ${activeIndex === index ? styles.open : ""}`}
+        >
+          <button className={styles.button} onClick={() => handleToggle(index)}>
+            {item.question}
+          </button>
+
+          {activeIndex === index && (
+            <p className={styles.answer}>{item.answer}</p>
+          )}
+        </div>
+      ))}
+    </div>
   );
 };
