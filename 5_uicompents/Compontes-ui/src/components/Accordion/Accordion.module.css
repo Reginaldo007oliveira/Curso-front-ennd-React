@@ -1,15 +1,65 @@
+.accordion {
+    width: 300px;
+    margin: 20px auto; /* Corrigido para incluir um valor numérico */
+    background: rgb(250, 246, 246);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25); /* Sombra suave */
+    padding: 10px;
+}
+
 .accordionItem {
-    border: 1px solid #ccc;
+    border: 1px solid #1a4ce2;
     margin: 10px 0;
-  }
-  
-  .accordionTitle {
-    padding: 10px;
+}
+
+.item {
+    border-bottom: 1px solid #21930a;
+    overflow: hidden;
+}
+
+.item:last-child {
+    border-bottom: none;
+    color: #bd1d1d;
+}
+
+.button {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+    text-align: left;
+    font-weight: 700;
     cursor: pointer;
-    background-color: #f1f1f1;
-  }
-  
-  .accordionContent {
-    padding: 10px;
-    background-color: #fff;
-  }
+    transition: background 0.3s ease;
+    display: flex;
+    justify-content: space-between; /* Corrigido */
+    align-items: center; /* Corrigido */
+    color: rgb(75, 75, 28);
+}
+
+.button:hover {
+    background: rgba(44, 162, 60, 0.09);
+}
+
+.answer {
+    padding: 10px 15px;
+    font-size: 16px;
+    color: rgb(217, 126, 23);
+    background: rgb(16, 3, 3);
+    border-left: 14px solid #007bff;
+    opacity: 0; /* Mudei para 1 para que o conteúdo seja visível */
+    overflow: hidden;
+    transition: all 0.3s ease-in-out; /* Ajustado para uma transição mais rápida */
+}
+
+.item.open .answer{
+    opacity: 1;
+    max-height: auto;
+    padding: 15px;
+    transition: all 0.3s ease-in-out; /* Ajustado para uma transição mais rápida */
+
+    
+
+
+}
