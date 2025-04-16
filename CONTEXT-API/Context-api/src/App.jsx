@@ -12,7 +12,7 @@ function App() {
   };
 
   return (
-    // Aplica a classe 'app' e a classe do tema atual ao div principal
+    // Aplica a classe 'app caso eu queira usar no meu componente' e a classe do tema atual ao div principal
     <div className={`app ${theme}`}>
       {/* Renderiza o componente Header, passando o tema e a função de alternância como props */}
       <Header theme={theme} toggleTheme={toggleTheme} />
