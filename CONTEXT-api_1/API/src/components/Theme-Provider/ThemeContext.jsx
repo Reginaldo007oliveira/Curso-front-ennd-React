@@ -15,7 +15,7 @@ export const ThemeProvider = ({ children }) => {
     <div>
       {/* Provedor do contexto, que disponibiliza o tema e a função de alternância */}
       <ThemeContext.Provider value={{ theme, toggleTheme }}>
-        {Children} {/* Renderiza os filhos que consomem o contexto */}
+        {children} {/* Renderiza os filhos que consomem o contexto */}
       </ThemeContext.Provider>
     </div>
   );
